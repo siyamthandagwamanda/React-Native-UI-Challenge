@@ -1,13 +1,13 @@
-import { Text, View } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Header from '../componets/Header';
+import TabBar from '../componets/TabBar';
 
-export default function Index() {
+export default function Home() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#F26A1B'}}>
-            HALODEK
-        </Text>
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+      <Header title="HALODEK" />
+      <TabBar tabs={['Chat', 'Status', 'Calls']} activeTab="Chat" />
+    </SafeAreaView>
   );
 }
-
 
